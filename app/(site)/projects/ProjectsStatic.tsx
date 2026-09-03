@@ -73,7 +73,7 @@ export const STATIC_PROJECTS: StaticProject[] = [
 
 export const ProjectsStatic: React.FC = () => {
   return (
-    <section className="border-t border-slate-200">
+    <section className="border-t border-white/5">
       <div className="inside-container-small">
         <div className="relative z-4 grid grid-cols-1 grid-rows-1 gap-4 md:grid-cols-2 md:grid-rows-2">
           {STATIC_PROJECTS.map((project) => {

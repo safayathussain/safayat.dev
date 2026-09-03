@@ -10,12 +10,12 @@ export const AboutSectionV2 = ({ className = "" }: { className?: string }) => {
   return (
     <section
       id="about"
-      className={clsx("border-y border-gray-200 bg-white", className)}
+      className={clsx("border-y border-white/5 ", className)}
     >
       <div className="inside-container relative z-2">
         {/* HEADLINE */}
         <AnimatedH2>
-          <span className="text-slate-500">About</span>
+          <span className="text-slate-400">About</span>
           <br />
           Nasir Chowdhury
         </AnimatedH2>
@@ -37,10 +37,10 @@ export const AboutSectionV2 = ({ className = "" }: { className?: string }) => {
               whileInView={{ opacity: 1, filter: "blur(0px)" }}
               viewport={{ once: true, margin: "0px 0px -100px 0px" }}
             >
-              <Text as="h2" size="lg" className="font-medium">
+              <Text as="h2" size="lg" className="font-medium text-slate-100">
                 Md Nasirul Islam Chowdhury
               </Text>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-slate-400">
                 Full-Stack Engineer (Next.js + TypeScript)
               </p>
             </MotionDiv>
@@ -49,12 +49,12 @@ export const AboutSectionV2 = ({ className = "" }: { className?: string }) => {
           <Typography
             as="article"
             size="lg"
-            className="[flex:1.5_0_0px] space-y-8 text-slate-500"
+            className="[flex:1.5_0_0px] space-y-8 text-slate-400"
           >
             <p>
 
 
-              <strong className="font-semibold text-slate-900">
+              <strong className="font-semibold text-slate-100">
                 I build
                 reliable, scalable production systems
               </strong>{" "}
@@ -65,7 +65,7 @@ export const AboutSectionV2 = ({ className = "" }: { className?: string }) => {
             </p>
 
             <p>
-              <strong className="font-semibold text-slate-900">
+              <strong className="font-semibold text-slate-100">
                 I ship v1s in weeks and iterate in days
               </strong>
               . Leveraging tools server-first React, typed APIs, background
@@ -73,7 +73,7 @@ export const AboutSectionV2 = ({ className = "" }: { className?: string }) => {
               ceremony.
             </p>
             <p>
-              <strong className="font-semibold text-slate-900">
+              <strong className="font-semibold text-slate-100">
                 My core philosophy is simplicity
               </strong>
               . if complexity balloons, I delete it and design the simpler path.

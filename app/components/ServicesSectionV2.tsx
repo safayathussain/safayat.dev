@@ -98,7 +98,7 @@ export const ServicesSectionV2: React.FC = ({
       <div className="flex h-full flex-col gap-16 max-md:w-full md:[flex:2_0_0px]">
         <AnimatedH2>
           Engineering <br />
-          <span className="text-slate-500">Toolkit</span>
+          <span className="text-slate-400">Toolkit</span>
         </AnimatedH2>
 
         {/* Tech Stack */}
@@ -126,13 +126,13 @@ export const ServicesSectionV2: React.FC = ({
 
                   <label
                     htmlFor={name}
-                    className="button-shadow flex h-13 w-13 items-center justify-center rounded-xl border border-gray-200 bg-white peer-checked:translate-y-0.5 peer-checked:shadow-none hover:translate-y-0.5"
+                    className="button-shadow flex h-13 w-13 items-center justify-center rounded-xl border border-white/10 bg-white/5 peer-checked:translate-y-0.5 peer-checked:shadow-none hover:translate-y-0.5 hover:bg-white/10 transition-colors"
                   >
                     <Icon
                       name={src}
                       width={30}
                       height={30}
-                      className="object-contain"
+                      className="object-contain invert opacity-80 group-hover:opacity-100 transition-opacity"
                     />
                   </label>
                   {/* optional tooltip */}
@@ -160,7 +160,7 @@ export const ServicesSectionV2: React.FC = ({
             variants={element2}
             className="flex items-center gap-3"
           >
-            <span className="button-shadow flex aspect-square h-10 w-10 items-center justify-center rounded-full bg-black">
+            <span className="button-shadow flex aspect-square h-10 w-10 items-center justify-center rounded-full bg-white/10">
               <Icon
                 name={src}
                 width={25}

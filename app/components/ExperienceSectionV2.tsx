@@ -103,13 +103,13 @@ export const ExperienceSectionV2 = ({ className = "" }: { className?: string }) 
     return (
         <section
             id="experience"
-            className={clsx("border-y border-gray-200 bg-white", className)}
+            className={clsx("border-y border-white/5 ", className)}
         >
             <div className="inside-container relative z-2">
                 {/* HEADLINE */}
                 <AnimatedH2 className="text-xl">
                     Professional<br />
-                    <span className="text-slate-500 lg:text-5xl text-4xl">Experience</span>
+                    <span className="text-slate-400 lg:text-5xl text-4xl">Experience</span>
                 </AnimatedH2>
 
                 {/* EXPERIENCE CARDS */}
@@ -123,7 +123,7 @@ export const ExperienceSectionV2 = ({ className = "" }: { className?: string }) 
                     {experiences.map((experience, index) => (
                         <MotionLi key={experience.company} variants={cardVariants}>
                             <MotionDiv
-                                className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:border-gray-300 hover:shadow-xl"
+                                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 transition-all duration-300 hover:border-white/20 hover:shadow-xl"
                                 whileHover={{ y: -8 }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
                             >
@@ -135,25 +135,25 @@ export const ExperienceSectionV2 = ({ className = "" }: { className?: string }) 
 
                                 {/* Company & Role */}
                                 <div className="mb-6">
-                                    <h3 className="text-xl font-semibold text-slate-900 group-hover:text-slate-700 transition-colors">
+                                    <h3 className="text-xl font-semibold text-slate-100 group-hover:text-white transition-colors">
                                         {experience.company}
                                     </h3>
-                                    <p className="text-sm font-medium text-slate-600 mt-1">
+                                    <p className="text-sm font-medium text-slate-300 mt-1">
                                         {experience.role}
                                     </p>
-                                    <p className="text-xs text-slate-500 mt-1">
+                                    <p className="text-xs text-slate-400 mt-1">
                                         {experience.duration}
                                     </p>
                                 </div>
 
                                 {/* Description */}
-                                <p className="text-xs mb-6 text-slate-600 ">
+                                <p className="text-xs mb-6 text-slate-300 ">
                                     {experience.description}
                                 </p>
 
                                 {/* Achievements */}
                                 <div className="mb-6">
-                                    <h4 className="text-sm font-semibold text-slate-900 mb-3">
+                                    <h4 className="text-sm font-semibold text-slate-100 mb-3">
                                         Key Achievements
                                     </h4>
                                     <MotionUl
@@ -173,7 +173,7 @@ export const ExperienceSectionV2 = ({ className = "" }: { className?: string }) 
                                                     className="mt-1.5 h-1.5 w-1.5 rounded-full flex-shrink-0"
                                                     style={{ backgroundColor: experience.color }}
                                                 />
-                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                <p className="text-sm text-slate-300 leading-relaxed">
                                                     {achievement}
                                                 </p>
                                             </MotionLi>
@@ -186,7 +186,7 @@ export const ExperienceSectionV2 = ({ className = "" }: { className?: string }) 
                                     {experience.technologies.map((tech) => (
                                         <span
                                             key={tech}
-                                            className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-slate-700 transition-colors group-hover:bg-gray-200"
+                                            className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-slate-300 transition-colors group-hover:bg-white/20"
                                         >
                                             {tech}
                                         </span>
@@ -194,7 +194,7 @@ export const ExperienceSectionV2 = ({ className = "" }: { className?: string }) 
                                 </div>
 
                                 {/* Hover effect overlay */}
-                                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-transparent via-transparent to-slate-50/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
+                                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-transparent via-transparent to-white/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
                             </MotionDiv>
                         </MotionLi>
                     ))}
@@ -208,12 +208,12 @@ export const ExperienceSectionV2 = ({ className = "" }: { className?: string }) 
                     viewport={{ once: true, margin: "0px 0px -50px 0px" }}
                     transition={{ duration: 0.6, delay: 0.8 }}
                 >
-                    <Text size="lg" className="text-slate-600 mb-4">
+                    <Text size="lg" className="text-slate-300 mb-4">
                         Ready to bring this experience to your team?
                     </Text>
                     <a
                         href="#contact"
-                        className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:bg-slate-800 hover:scale-105"
+                        className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-slate-900 transition-all duration-200 hover:bg-slate-200 hover:scale-105"
                     >
                         Let&apos;s work together
                         <svg

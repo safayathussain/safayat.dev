@@ -10,22 +10,22 @@ import { WhiteButtonLink } from "./ui/WhiteButtonLink"
 
 export const RecruiterContact: React.FC = () => {
   return (
-    <section id="contact" className="scroll-mt-20 border-t border-gray-200">
+    <section id="contact" className="scroll-mt-20 border-t border-white/5">
       <div className="inside-container-small">
         <MotionDiv
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 100, damping: 14 }}
           viewport={{ once: true, amount: 0.5 }}
-          className="relative z-1 mx-auto flex w-full max-w-2xl flex-col items-center gap-8 rounded-2xl border border-gray-300 bg-white p-5.5 max-lg:text-center max-sm:px-1 sm:p-8"
+          className="relative z-1 mx-auto flex w-full max-w-2xl flex-col items-center gap-8 rounded-2xl border border-white/10 bg-white/5 p-5.5 max-lg:text-center max-sm:px-1 sm:p-8"
         >
           <div className="flex w-fit items-center gap-3 p-2 max-lg:justify-center">
             <div className="relative h-12 w-12 overflow-hidden rounded-full ring-4 ring-slate-200">
               <Image src={profilePhoto} alt="Md Nasirul Islam Chowdhury" fill sizes="80px" className="object-cover" />
             </div>
-            <div className="flex flex-col items-start text-sm whitespace-nowrap text-slate-700">
-              <h2 className="font-medium text-slate-900">Md Nasirul Islam Chowdhury</h2>
-              <p className="text-slate-500">Full Stack Web Engineer</p>
+            <div className="flex flex-col items-start text-sm whitespace-nowrap text-slate-300">
+              <h2 className="font-medium text-slate-100">Md Nasirul Islam Chowdhury</h2>
+              <p className="text-slate-400">Full Stack Web Engineer</p>
             </div>
           </div>
 
@@ -34,7 +34,7 @@ export const RecruiterContact: React.FC = () => {
               <span>
                 Building Something Amazing? <br />
               </span>
-              <span className="text-slate-500">Let&apos;s chat.</span>
+              <span className="text-slate-400">Let&apos;s chat.</span>
             </H3>
             <Text className="max-w-2xl text-center text-balance">
               I build fast, accessible web apps with React, Next.js, and TypeScript. I&apos;m looking for teams that value product quality, performance, and

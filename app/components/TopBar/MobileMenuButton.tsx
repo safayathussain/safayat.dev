@@ -30,7 +30,7 @@ export const MobileMenuButton: React.FC = () => {
       {...(isDesktop && !isTouch && { onPointerEnter: () => setScrolled("down") })}
       onClick={() => (isDesktop ? setScrolled("down") : setMobileMenu((prev) => (prev === "open" ? "closed" : "open")))}
       className={clsx(
-        "md:scrolled-down:opacity-0 md:scrolled-down:pointer-events-none group right-3 h-6 w-6 text-sm transition-all duration-300 ease-in-out hover:cursor-pointer md:absolute"
+        "md:scrolled-down:opacity-0 md:scrolled-down:pointer-events-none group right-3 h-6 w-6 text-sm transition-all duration-300 ease-in-out hover:cursor-pointer md:absolute md:hidden  "
       )}
     >
       <DotMenuIcon />
