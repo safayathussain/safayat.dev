@@ -1,14 +1,14 @@
 export const DOMAIN_URL = "https://www.nasirchy.com";
 
 export const SITE_CONFIG = {
-  title: "Md Nasirul Islam Chowdhury",
+  title: "Safayat Hussain Chowdhury",
   description:
-    "Portfolio of Md Nasirul Islam Chowdhury, Seattle-based full-stack engineer. Specializing in Next.js, React, TypeScript, and Tailwind CSS.",
+    "Portfolio of Safayat Hussain Chowdhury, Seattle-based full-stack engineer. Specializing in Next.js, React, TypeScript, and Tailwind CSS.",
   url:
     DOMAIN_URL ?? process.env.NEXT_PUBLIC_VERCEL_URL ?? "http://localhost:3000",
-  siteName: "Md Nasirul Islam Chowdhury",
+  siteName: "Safayat Hussain Chowdhury",
   keywords: [
-    "Md Nasirul Islam Chowdhury",
+    "Safayat Hussain Chowdhury",
     "React Zero-UI",
     "Next.js",
     "React",
@@ -20,15 +20,15 @@ export const SITE_CONFIG = {
 } as const;
 
 export const SITE_NAP = {
-  name: "Md Nasirul Islam Chowdhury",
+  name: "Safayat Hussain Chowdhury",
   googleBusinessType: "LocalBusiness" as const,
-  contact: "Md Nasirul Islam Chowdhury",
+  contact: "Safayat Hussain Chowdhury",
   contactTitle: "CEO",
-  email: "nasirchy252@gmail.com",
-  phone: "+8801644113296",
-  formattedPhone: "+880 01644113296",
+  email: "safayatofficial1@gmail.com",
+  phone: "+8801786673089",
+  formattedPhone: "+880 01786673089",
   addressLink:
-    "https://www.google.com/maps/search/?api=1&query=Md+Nasirul+Islam+Chowdhury",
+    "https://www.google.com/maps/search/?api=1&query=Safayat+Hussain+Chowdhury",
   street: "12601 NE 124th ST",
   city: "Sylhet",
   state: "Sylhet",
@@ -36,10 +36,10 @@ export const SITE_NAP = {
   openingHours: [{ days: "Mon - Sat", hours: "8am - 6pm" }] as const,
   // googleReviewLink: "https://g.page/r/CXHVs1ony_76EAI/review",
   profiles: {
-    facebook: "https://www.facebook.com/nasir.web.dev",
-    linkedIn: "https://www.linkedin.com/in/nasir252/",
-    github: "https://github.com/Nasirul-Islam-Chowdhury",
-    x: "https://x.com/Nasir143",
+    facebook: "https://www.facebook.com/safayat.dev",
+    linkedIn: "https://www.linkedin.com/in/safayathussain/",
+    github: "https://github.com/safayathussain",
+    x: "https://x.com/",
     resume:
       "https://docs.google.com/document/d/1KZt5Ai6sCwHWtRCKDbxe6UYUPgklvx8xGJlBq4ows6M/edit?usp=sharing",
   } as const,
@@ -51,7 +51,7 @@ export const SITE_SLUGS = {
   home: "/",
   projects: "/projects",
   contact: "/#contact",
-  about: "/#about-nasir",
+  about: "/#about-safayat",
   projectLinks: {
     iao: "/projects/iron-and-oak",
     travelAi: "/projects/travelAi",

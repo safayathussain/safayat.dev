@@ -35,7 +35,7 @@ export function ImageReveal({ className = "", ...img }: ImageRevealProps): React
         <Image
           {...img}
           fill
-          alt="Md Nasirul Islam Chowdhury Profile Photo"
+          alt="Safayat Hussain Chowdhury Profile Photo"
           className={`rounded-2xl object-cover saturate-125`}
           sizes="(max-width: 560px) 300px, (max-width: 768px) 500px, 50vw"
         />

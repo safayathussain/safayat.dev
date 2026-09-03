@@ -60,8 +60,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/Nasirul-Islam-Chowdhury/developer-portfolio
-cd developer-portfolio
+git clone https://github.com/safayathussain/safayat.dev
+cd safayat.dev
 ```
 
 **Installation**

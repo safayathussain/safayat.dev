@@ -45,10 +45,11 @@ export const FooterV2: React.FC = () => {
             <li className="flex flex-col gap-1 md:gap-2">
               <span className="text-gray-500">Email</span>
               <Link
-                href="mailto:nasirchy252@gmail.com"
+                href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBncJHmmpSJhGccCRlkkwPMhQLnNkcgXQbCmvpGlzbbCpZmgBrjgNcSWPTTfFdGHJDBLVCT"
                 className="w-fit text-sm transition-colors duration-200 hover:text-gray-300"
+                target="_blank"
               >
-                nasirchy252@gmail.com
+                safayatofficial1@gmail.com
               </Link>
             </li>
             {/* <li className="flex flex-col gap-1 md:gap-2">
@@ -106,13 +107,10 @@ export const FooterV2: React.FC = () => {
             </div>
           </div>
           <span className="text-[#b8b8b8]">
-            © 2025 Md Nasirul Islam Chowdhury
+            © 2025 Safayat Hussain Chowdhury
           </span>
         </div>
-        {/* <h2 className="large-brand-text absolute -bottom-16 left-0 flex gap-10 w-full items-center justify-center font-medium whitespace-nowrap text-white  md:text-[180px] lg:text-[240px]">
-          Nasir
-          <span className="hidden md:inline">&nbsp;Chy</span>
-        </h2> */}
+      
       </div>
     </footer>
   );

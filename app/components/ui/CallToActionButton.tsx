@@ -60,7 +60,7 @@ export const CallToActionButton = () => {
   }
 
   return (
-    <a href={SITE_NAP.profiles.github} target="_blank" rel="noopener" aria-label="Md Nasirul Islam Chowdhury's GitHub">
+    <a href={SITE_NAP.profiles.github} target="_blank" rel="noopener" aria-label="Safayat Hussain Chowdhury's GitHub">
       <MotionButton
         initial="initial"
         animate="animate"

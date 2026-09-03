@@ -23,7 +23,7 @@ export const HeroV2 = () => {
               fadeDirection="left"
               className="inline-block"
             >
-              Nasir
+              Safayat
             </AnimatedElement>{" "}
             <br />
             <AnimatedElement

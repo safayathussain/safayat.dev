@@ -17,14 +17,14 @@ export const RecruiterContact: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 100, damping: 14 }}
           viewport={{ once: true, amount: 0.5 }}
-          className="relative z-1 mx-auto flex w-full max-w-2xl flex-col items-center gap-8 rounded-2xl border border-white/10 bg-white/5 p-5.5 max-lg:text-center max-sm:px-1 sm:p-8"
+          className="relative z-1 mx-auto flex w-full max-w-2xl flex-col items-center gap-7 rounded-2xl border border-white/10 bg-white/5 p-5.5 max-lg:text-center max-sm:px-1 sm:p-8"
         >
           <div className="flex w-fit items-center gap-3 p-2 max-lg:justify-center">
             <div className="relative h-12 w-12 overflow-hidden rounded-full ring-4 ring-slate-200">
-              <Image src={profilePhoto} alt="Md Nasirul Islam Chowdhury" fill sizes="80px" className="object-cover" />
+              <Image src={profilePhoto} alt="Safayat Hussain Chowdhury" fill sizes="80px" className="object-cover" />
             </div>
             <div className="flex flex-col items-start text-sm whitespace-nowrap text-slate-300">
-              <h2 className="font-medium text-slate-100">Md Nasirul Islam Chowdhury</h2>
+              <h2 className="font-medium text-slate-100">Safayat Hussain Chowdhury</h2>
               <p className="text-slate-400">Full Stack Web Engineer</p>
             </div>
           </div>
@@ -43,7 +43,7 @@ export const RecruiterContact: React.FC = () => {
           </div>
 
           <div className="flex flex-wrap items-center gap-4 max-lg:justify-center">
-            <BlackButtonLink href={`mailto:${SITE_NAP.email}`}>
+            <BlackButtonLink href={`https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBncJHmmpSJhGccCRlkkwPMhQLnNkcgXQbCmvpGlzbbCpZmgBrjgNcSWPTTfFdGHJDBLVCT`}>
               <Mail height={18} width={18} className="h-[18px] w-[18px] text-white" />
               Email me
             </BlackButtonLink>
@@ -59,10 +59,10 @@ export const RecruiterContact: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-3  max-lg:justify-center  ">
-            <WhiteButtonLink href={"https://calendly.com/nasirchy252/coffee-chat?month=2025-09"} className="relative text-black font-semibold">
+            {/* <WhiteButtonLink href={"https://calendly.com/nasirchy252/coffee-chat?month=2025-09"} className="relative text-black font-semibold">
               <Icon name="calendar" height={18} width={18} className="h-[18px] w-[18px]  " />
               Book a call
-            </WhiteButtonLink>
+            </WhiteButtonLink> */}
             <WhiteButtonLink href={SITE_NAP.profiles.resume} className="relative text-black font-semibold">
 
               Resume

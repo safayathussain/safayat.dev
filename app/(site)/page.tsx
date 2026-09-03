@@ -8,13 +8,13 @@ import { Metadata } from "next"
 import { SITE_SLUGS } from "@/config/siteConfig"
 
 export const metadata: Metadata = {
-  title: "Web Developer Portfolio | Md Nasirul Islam Chowdhury | React & Next.js",
+  title: "Web Developer Portfolio | Safayat Hussain Chowdhury | React & Next.js",
   description:
-    "Explore the web developer portfolio of Md Nasirul Islam Chowdhury, a full-stack engineer building fast, modern web applications. See what a professional coding portfolio looks like, featuring projects in React, Next.js, and the custom-built React-Zero-UI library.",
+    "Explore the web developer portfolio of Safayat Hussain Chowdhury, a full-stack engineer building fast, modern web applications. See what a professional coding portfolio looks like, featuring projects in React, Next.js, and the custom-built React-Zero-UI library.",
 
   keywords: [
     "Web Developer Portfolio",
-    "Md Nasirul Islam Chowdhury",
+    "Safayat Hussain Chowdhury",
     "Serbyte",
     "React Zero-UI",
     "Next.js",
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
 
     "React Developer Portfolio",
   ],
-  authors: [{ name: "Md Nasirul Islam Chowdhury" }],
-  creator: "Md Nasirul Islam Chowdhury",
+  authors: [{ name: "Safayat Hussain Chowdhury" }],
+  creator: "Safayat Hussain Chowdhury",
   alternates: {
     canonical: SITE_SLUGS.home,
   },

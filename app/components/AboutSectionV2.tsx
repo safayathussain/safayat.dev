@@ -17,7 +17,7 @@ export const AboutSectionV2 = ({ className = "" }: { className?: string }) => {
         <AnimatedH2>
           <span className="text-slate-400">About</span>
           <br />
-          Nasir Chowdhury
+          Safayat Hussain
         </AnimatedH2>
         <div className="flex flex-col-reverse gap-12 md:flex-row md:gap-16">
           {/* ---------------- left column ---------------- */}
@@ -27,7 +27,7 @@ export const AboutSectionV2 = ({ className = "" }: { className?: string }) => {
 
             <ImageReveal
               src={profilePhoto}
-              alt="Md Nasirul Islam Chowdhury"
+              alt="Safayat Hussain Chowdhury"
               className="custom-shadow aspect-[4/4.5]"
             />
 
@@ -38,7 +38,7 @@ export const AboutSectionV2 = ({ className = "" }: { className?: string }) => {
               viewport={{ once: true, margin: "0px 0px -100px 0px" }}
             >
               <Text as="h2" size="lg" className="font-medium text-slate-100">
-                Md Nasirul Islam Chowdhury
+                Safayat Hussain Chowdhury
               </Text>
               <p className="text-sm text-slate-400">
                 Full-Stack Engineer (Next.js + TypeScript)

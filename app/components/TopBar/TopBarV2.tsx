@@ -33,7 +33,7 @@ export const TopBarV2: React.FC = () => {
               >
                 <Image
                   src="/profile.jpg"
-                  alt="nasir logo"
+                  alt="safayat logo"
                   height={26}
                   width={26}
                   className="rounded-full h-9 w-9 object-cover shadow-md"
@@ -53,7 +53,7 @@ export const TopBarV2: React.FC = () => {
                   transition={{ delay: 0.45, duration: 0.3 }}
                   className="font-medium text-white/90 ml-2"
                 >
-                  Nasir Chowdhury
+                  Safayat Hussain
                 </MotionSpan>
               </MotionDiv>
             </Link>

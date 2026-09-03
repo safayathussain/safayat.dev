@@ -56,10 +56,10 @@ const projectsData: ProjectItem[] = [
 export const projectsSchema: WithContext<CollectionPage> = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: "Projects - Md Nasirul Islam Chowdhury",
+  name: "Projects - Safayat Hussain Chowdhury",
   url: `${SITE_CONFIG.url}${SITE_SLUGS.projects}`,
   about:
-    "Projects and case studies by Md Nasirul Islam Chowdhury (Next.js, React, TypeScript).",
+    "Projects and case studies by Safayat Hussain Chowdhury (Next.js, React, TypeScript).",
   mainEntity: {
     "@type": "ItemList",
     itemListOrder: "Descending",
@@ -80,12 +80,12 @@ export const projectsSchema: WithContext<CollectionPage> = {
 export const profilePageSchema: WithContext<ProfilePage> = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  name: "About - Md Nasirul Islam Chowdhury",
+  name: "About - Safayat Hussain Chowdhury",
   url: `${SITE_CONFIG.url}/about`,
   mainEntity: {
     "@type": "Person",
     "@id": `${SITE_CONFIG.url}/#austin`,
-    name: "Md Nasirul Islam Chowdhury",
+    name: "Safayat Hussain Chowdhury",
     url: SITE_CONFIG.url,
     jobTitle: "Full-Stack Engineer",
     email: SITE_NAP.email,
@@ -153,7 +153,7 @@ const projectBreadcrumbSchema: WithContext<BreadcrumbList> = {
     {
       "@type": "Person",
       "@id": "https://serbyte.dev/#austin",
-      name: "Md Nasirul Islam Chowdhury",
+      name: "Safayat Hussain Chowdhury",
       url: SITE_CONFIG.url,
       jobTitle: "Full-Stack Engineer",
       image: { "@id": "https://serbyte.dev/#headshot" },
@@ -179,7 +179,7 @@ const projectBreadcrumbSchema: WithContext<BreadcrumbList> = {
     {
       "@type": "WebSite",
       "@id": `${SITE_CONFIG.url}#website`,
-      name: "Md Nasirul Islam Chowdhury - Developer Portfolio",
+      name: "Safayat Hussain Chowdhury - Developer Portfolio",
       url: SITE_CONFIG.url,
       publisher: { "@id": `${SITE_CONFIG.url}#austin` },
       inLanguage: "en",
