@@ -11,7 +11,6 @@ import { useIsMobile } from "../hooks/useMediaQuery";
 import { useRef, useEffect } from "react";
 import { useScroll, useSpring } from "motion/react";
 import { useUI } from "@react-zero-ui/core";
-import { externalLinks } from "@/config/siteConfig";
 
 // Update the ids array to match the actual grid IDs being used
 const ids = ["phoneSwapZone", "shineMen", "travelAi", "iron-and-oak"];
@@ -35,7 +34,6 @@ export function ProjectsGrid({ className }: { className?: string }) {
   const progress = useSpring(scrollYProgress, { stiffness, damping });
 
   const OFFSET_TUNING: Record<string, Partial<HeroOffset>> = {
-    // Add tuning for phoneSwapZone and shineMen
     phoneSwapZone: {
       rot: 3,
       s: responsiveScale,
@@ -67,7 +65,6 @@ export function ProjectsGrid({ className }: { className?: string }) {
       const base = rawOffsets[id];
       const t = OFFSET_TUNING[id];
 
-      // Add null check to prevent undefined errors
       if (!base || !t) {
         console.warn(`Missing offset data for ${id}`);
         return [id, { x: 0, y: 0, rot: 0, s: 1 }];
@@ -89,9 +86,9 @@ export function ProjectsGrid({ className }: { className?: string }) {
   useEffect(() => {
     const unsubscribe = progress.on("change", (latest) => {
       if (latest >= triggerProgress) {
-        setReveal("true"); // Reveal ON
+        setReveal("true");
       } else {
-        setReveal("false"); // Reveal OFF
+        setReveal("false");
       }
     });
 
@@ -105,7 +102,6 @@ export function ProjectsGrid({ className }: { className?: string }) {
       ref={ref}
     >
       <div className="relative z-4 grid grid-cols-1 grid-rows-1 gap-4 md:grid-cols-2 md:grid-rows-2">
-
         <AnimatedCard
           key="travelAi"
           src={travelAi}
@@ -115,10 +111,9 @@ export function ProjectsGrid({ className }: { className?: string }) {
           color="#DA961A"
           type="Ziarah Travel AI"
           progress={progress}
-          href={externalLinks.travelAI}
-          dataText="View Live Site"
+          href="/projects/travelai"
+          dataText="View Details"
         />
-
 
         <AnimatedCard
           key="shineMen"
@@ -129,8 +124,8 @@ export function ProjectsGrid({ className }: { className?: string }) {
           color="#024EFC"
           type="Men's Skin Care Website"
           progress={progress}
-          href={externalLinks.shineMen}
-          dataText="View Live Site"
+          href="/projects/shinemen"
+          dataText="View Details"
         />
         <AnimatedCard
           key={"orbital_coaching"}
@@ -141,8 +136,8 @@ export function ProjectsGrid({ className }: { className?: string }) {
           color="#13739C"
           type="Landing Page"
           progress={progress}
-          dataText="View Live Site"
-          href={externalLinks.orbital_client}
+          dataText="View Details"
+          href="/projects/orbital-coaching"
         />
         <AnimatedCard
           key={"PhoneSwapZone"}
@@ -153,8 +148,8 @@ export function ProjectsGrid({ className }: { className?: string }) {
           color="#3B06D1"
           type="Phone Resale Platform"
           progress={progress}
-          href={externalLinks.phoneSwapZone}
-          dataText="View Live Site"
+          href="/projects/phoneswapzone"
+          dataText="View Details"
         />
       </div>
     </section>

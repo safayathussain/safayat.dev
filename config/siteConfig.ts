@@ -1,4 +1,4 @@
-export const DOMAIN_URL = "https://www.nasirchy.com";
+export const DOMAIN_URL = "https://www.safayat.dev";
 
 export const SITE_CONFIG = {
   title: "Safayat Hussain Chowdhury",

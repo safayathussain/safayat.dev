@@ -32,11 +32,12 @@ export interface AnimatedCardProps {
 export function AnimatedCard({ src, alt, offset, color, type, gridId, progress, dataText = "View Website ↗", href }: AnimatedCardProps) {
   const ref = useRef<HTMLDivElement>(null)
   useCompositorSpring(ref, progress)
+  const isExternal = href ? href.startsWith("http") : false
   return (
     <Link
       data-text={dataText}
       aria-label={alt}
-      target={href ? "_blank" : undefined}
+      target={isExternal ? "_blank" : undefined}
       href={href ?? `${SITE_SLUGS.projects}/${gridId}`}
       data-grid-id={gridId}
       className="reveal-false:pointer-events-none"

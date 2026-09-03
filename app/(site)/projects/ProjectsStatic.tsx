@@ -1,11 +1,7 @@
 import { StaticImageData } from "next/image";
 import { Card } from "@/app/components/ProjectCard/Card";
-import phoneSwapZone from "@/app/images/phoneswapzone.png";
-import shineMen from "@/app/images/shinemen.png";
-import orbital_coaching from "@/app/images/orbital.png";
 import { Link } from "@/app/utils/Link";
-import { externalLinks, SITE_SLUGS } from "@/config/siteConfig";
-import travelAi from "@/app/images/travel.png";
+import { PROJECTS } from "@/app/data/project-data";
 
 type StaticProject = {
   id: string;
@@ -20,56 +16,18 @@ type StaticProject = {
   isExternal: boolean;
 };
 
-export const STATIC_PROJECTS: StaticProject[] = [
-  {
-    id: "PhoneSwapZone",
-    src: phoneSwapZone,
-    alt: "PhoneSwapZone - Preview",
-    color: "#3B06D1",
-    type: "Phone Resale Platform",
-    text: "Visit Live Site",
-    href: externalLinks.phoneSwapZone,
-    dataText: "Visit Live Site",
-    ariaLabel: "View Live Site",
-    isExternal: true,
-  },
-  {
-    id: "Shine Men",
-    src: shineMen,
-    alt: "Shinemen Preview",
-    color: "#024EFC",
-    type: "Men's Skincare Website",
-    text: "Visit Live Site",
-    href: externalLinks.shineMen,
-    dataText: "Visit Live Site",
-    ariaLabel: "Visit Live Site",
-    isExternal: true,
-  },
-  {
-    id: "Orbital Coaching Center",
-    src: orbital_coaching,
-    alt: "Orbital Coaching Center Preview",
-    color: "#DA961AA5",
-    type: "Orbital Coaching Center Website",
-    text: "View Website",
-    href: externalLinks.orbital_client,
-    dataText: "View Website",
-    ariaLabel: "View Saas Landing Page",
-    isExternal: true,
-  },
-  {
-    id: "TravelAi",
-    src: travelAi,
-    alt: "Ziarah Preview",
-    color: "#DA961AA5",
-    type: "Ai Powered Travel Website",
-    text: "View Website",
-    href: externalLinks.travelAI,
-    dataText: "View Website",
-    ariaLabel: "View Entitled Website",
-    isExternal: true,
-  },
-];
+export const STATIC_PROJECTS: StaticProject[] = PROJECTS.map((p) => ({
+  id: p.slug,
+  src: p.thumbnail,
+  alt: p.thumbnailAlt,
+  color: p.color,
+  type: p.type,
+  text: "View Details",
+  href: `/projects/${p.slug}`,
+  dataText: "View Details",
+  ariaLabel: `View ${p.title} project details`,
+  isExternal: false,
+}));
 
 export const ProjectsStatic: React.FC = () => {
   return (

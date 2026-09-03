@@ -8,7 +8,7 @@ import { Metadata } from "next"
 import { SITE_SLUGS } from "@/config/siteConfig"
 
 export const metadata: Metadata = {
-  title: "Web Developer Portfolio | Safayat Hussain Chowdhury | React & Next.js",
+  title: "Safayat Hussain",
   description:
     "Explore the web developer portfolio of Safayat Hussain Chowdhury, a full-stack engineer building fast, modern web applications. See what a professional coding portfolio looks like, featuring projects in React, Next.js, and the custom-built React-Zero-UI library.",
 
