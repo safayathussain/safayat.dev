@@ -16,45 +16,33 @@ interface Experience {
 
 const experiences: Experience[] = [
     {
-        company: "Zecho",
-        role: "Frontend Engineer Intern",
-        duration: "Aug 2023 - Jan 2024",
+        company: "Syscomatic",
+        role: "Full Stack Engineer",
+        duration: "2022 - Present",
         description: "",
         achievements: [
-            "Built dynamic, responsive, and user-friendly websites with React.js in collaboration with the development team.",
-            "Developed key features such as an online code editor with GitHub integration, enabling users to write, test, and push code to GitHub seamlessly with a single click.",
-            "Gained hands-on experience with modern frameworks like Next.js, enhancing website performance, and scalability."
+            "Built and maintained dynamic, responsive, and user-friendly web applications in collaboration with cross-functional development teams.",
+            "Developed complex frontend and backend features with a focus on performance, scalability, and maintainability.",
+            "Worked across the full development lifecycle, including UI development, API integration, database management, debugging, and deployment.",
+            "Contributed to large-scale projects, solving challenging technical problems and adapting to evolving business requirements."
         ],
-        technologies: ["React", "Next.js", "TypeScript", "Redux"],
-        color: "#0E172B"
+        technologies: ["React", "Next.js", "Express", "Redux Toolkit", "MongoDB", "PostgreSQL", "Django"],
+        color: "#6366F1"
     },
     {
-        company: "KoWorkerAi",
-        role: "Full Stack Engineer Intern",
-        duration: "Feb 2024 - Sep 2024",
+        company: "NepGov",
+        role: "Full Stack Engineer",
+        duration: "2025 - 2026",
         description: "",
         achievements: [
-            "Optimized complex state management with Redux Toolkit, boosting maintainability and developer productivity.",
-            "Collaborated with the development team to maintain and enhance both frontend and backend codebases for a Video AI SaaS platform, ensuring smooth functionality and scalability",
-            "Integrated a powerful video editing API to enable seamless, real-time video processing and editing capabilities."
-
+            "Designed and developed a feature-rich web platform with a comprehensive admin dashboard and management system.",
+            "Built role-based, permission-based access control and a real-time survey system with complex data and user interactions.",
+            "Independently handled end-to-end development, from feature planning and UI/UX design to development, debugging, and deployment.",
+            "Managed production deployment, server configuration, and application maintenance."
         ],
-        technologies: ["React", "Next.js", "Tailwind CSS", "Typescript", "Figma", "Eleven labs", "Redux"],
-        color: "#0E172B"
+        technologies: [ "Next.js", "Express", "MongoDB", "Redux Toolkit", "Redis", "Tailwind", "Socket.io"],
+        color: "#06B6D4"
     },
-    {
-        company: "Ziarah",
-        role: "Full Stack Engineer ",
-        duration: "Oct 2024 - Present",
-        description: "",
-        achievements: [
-            "Developed a hotel booking service that allowed users to efficiently search, filter, and book hotels, improving the overall booking flow",
-            "Built the frontend for a Travel Agent AI platform, enabling users to seamlessly book hotels, flights, travel packages, and activities through an interactive interface",
-            "Took leadership responsibility within the team, guiding implementation, and ensuring smooth collaboration across the development process"
-        ],
-        technologies: ["Node.js", "Express", "MongoDB", "React", "Next.js"],
-        color: "#0E172B"
-    }
 ];
 
 const container: Variants = {
@@ -114,16 +102,16 @@ export const ExperienceSectionV2 = ({ className = "" }: { className?: string }) 
 
                 {/* EXPERIENCE CARDS */}
                 <MotionUl
-                    className=" grid gap-8 md:grid-cols-1 lg:grid-cols-3"
+                    className="grid gap-8 grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto"
                     variants={container}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "0px 0px -100px 0px" }}
                 >
-                    {experiences.map((experience, index) => (
-                        <MotionLi key={experience.company} variants={cardVariants}>
+                    {experiences.map((experience) => (
+                        <MotionLi key={experience.company} variants={cardVariants} className="h-full">
                             <MotionDiv
-                                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 transition-all duration-300 hover:border-white/20 hover:shadow-xl"
+                                className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 transition-all duration-300 hover:border-white/20 hover:shadow-xl"
                                 whileHover={{ y: -8 }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
                             >
@@ -133,56 +121,62 @@ export const ExperienceSectionV2 = ({ className = "" }: { className?: string }) 
                                     style={{ backgroundColor: experience.color }}
                                 />
 
-                                {/* Company & Role */}
-                                <div className="mb-6">
-                                    <h3 className="text-xl font-semibold text-slate-100 group-hover:text-white transition-colors">
-                                        {experience.company}
-                                    </h3>
-                                    <p className="text-sm font-medium text-slate-300 mt-1">
-                                        {experience.role}
-                                    </p>
-                                    <p className="text-xs text-slate-400 mt-1">
-                                        {experience.duration}
-                                    </p>
-                                </div>
+                                <div>
+                                    {/* Company & Role */}
+                                    <div className="mb-6">
+                                        <div className="flex flex-wrap items-center justify-between gap-2">
+                                            <h3 className="text-2xl font-semibold text-slate-100 group-hover:text-white transition-colors">
+                                                {experience.company}
+                                            </h3>
+                                            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-400">
+                                                {experience.duration}
+                                            </span>
+                                        </div>
+                                        <p className="text-base font-medium text-slate-300 mt-1.5">
+                                            {experience.role}
+                                        </p>
+                                    </div>
 
-                                {/* Description */}
-                                <p className="text-xs mb-6 text-slate-300 ">
-                                    {experience.description}
-                                </p>
+                                    {/* Description (if provided) */}
+                                    {experience.description ? (
+                                        <p className="text-xs mb-6 text-slate-300 ">
+                                            {experience.description}
+                                        </p>
+                                    ) : null}
 
-                                {/* Achievements */}
-                                <div className="mb-6">
-                                    <h4 className="text-sm font-semibold text-slate-100 mb-3">
-                                        Key Achievements
-                                    </h4>
-                                    <MotionUl
-                                        className="space-y-2"
-                                        variants={container}
-                                        initial="hidden"
-                                        whileInView="visible"
-                                        viewport={{ once: true }}
-                                    >
-                                        {experience.achievements.map((achievement, achievementIndex) => (
-                                            <MotionLi
-                                                key={achievementIndex}
-                                                variants={achievementVariants}
-                                                className="flex items-start gap-2"
-                                            >
-                                                <div
-                                                    className="mt-1.5 h-1.5 w-1.5 rounded-full flex-shrink-0"
-                                                    style={{ backgroundColor: experience.color }}
-                                                />
-                                                <p className="text-sm text-slate-300 leading-relaxed">
-                                                    {achievement}
-                                                </p>
-                                            </MotionLi>
-                                        ))}
-                                    </MotionUl>
+                                    {/* Achievements */}
+                                    <div className="mb-6">
+                                        <h4 className="text-sm font-semibold text-slate-100 mb-3">
+                                            Key Achievements
+                                        </h4>
+                                        <MotionUl
+                                            className="space-y-3"
+                                            variants={container}
+                                            initial="hidden"
+                                            whileInView="visible"
+                                            viewport={{ once: true }}
+                                        >
+                                            {experience.achievements.map((achievement, achievementIndex) => (
+                                                <MotionLi
+                                                    key={achievementIndex}
+                                                    variants={achievementVariants}
+                                                    className="flex items-start gap-2.5"
+                                                >
+                                                    <div
+                                                        className="mt-2 h-1.5 w-1.5 rounded-full flex-shrink-0"
+                                                        style={{ backgroundColor: experience.color }}
+                                                    />
+                                                    <p className="text-sm text-slate-300 leading-relaxed">
+                                                        {achievement}
+                                                    </p>
+                                                </MotionLi>
+                                            ))}
+                                        </MotionUl>
+                                    </div>
                                 </div>
 
                                 {/* Technologies */}
-                                <div className="flex flex-wrap gap-2">
+                                <div className="flex flex-wrap gap-2 pt-4 border-t border-white/5">
                                     {experience.technologies.map((tech) => (
                                         <span
                                             key={tech}
