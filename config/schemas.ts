@@ -17,39 +17,25 @@ interface ProjectItem {
 // Project data for schema
 const projectsData: ProjectItem[] = [
   {
-    name: "Ziarah Travel Ai",
-    url: externalLinks.travelAI,
-    date: "2025-06-01",
-    description: "Zero Re-Render State Library",
+    name: "NepGov",
+    url: externalLinks.nepgov,
+    date: "2026-01-01",
+    description: "Civic Data, Public Opinion Polling & Real-Time Electoral Analytics Platform",
     isExternal: true,
   },
   {
-    name: "Vets Choice Insurance",
-    url: externalLinks.shineMen,
-    date: "2025-05-20",
-    description: "Pet Insurance Website",
-    isExternal: true,
-  },
-  {
-    name: "Zero Icon Sprite",
-    url: externalLinks.orbital_client,
-    date: "2024-06-15",
-    description: "SVG Build Tool",
-    isExternal: true,
-  },
-  {
-    name: "Iron & Oak",
-    url: SITE_SLUGS.projectLinks.iao,
-    date: "2024-06-15",
-    description: "Private Security Website",
+    name: "MaxLive",
+    url: SITE_SLUGS.projectLinks.maxlive,
+    date: "2024-06-01",
+    description: "Multi-Tiered Admin Infrastructure & Point Economy for Live-Streaming",
     isExternal: false,
   },
   {
-    name: "Entitled",
-    url: externalLinks.phoneSwapZone,
-    date: "2024-02-10",
-    description: "Event Management Web App",
-    isExternal: true,
+    name: "Holago",
+    url: SITE_SLUGS.projectLinks.holago,
+    date: "2024-03-01",
+    description: "Streamlined Apparel E-Commerce Platform & Two-Tier Retail Management",
+    isExternal: false,
   },
 ];
 

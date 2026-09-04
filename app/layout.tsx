@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body className="relative min-w-[300px] bg-[#030014]" data-mobile-menu="closed" data-scrolled="up">
+      <body className="relative min-w-[300px] bg-[#030014]" data-mobile-menu="closed" data-scrolled="up" data-reveal="false">
         <MotionWrapper>
           <DesktopCursor />
           <ViewTransitions />

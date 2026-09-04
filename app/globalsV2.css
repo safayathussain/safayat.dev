@@ -3,6 +3,15 @@
 
 @custom-variant reveal-false ([data-reveal="false"] &);
 
+body[data-reveal="false"] .hero-card-overlay {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+body[data-reveal="true"] .hero-card-overlay {
+  opacity: 1;
+}
+
 @custom-variant touch {
   @media ((any-hover: none) and (any-pointer: coarse)) {
     @slot;

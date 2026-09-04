@@ -4,21 +4,17 @@ import { debounce } from "../utils/debounce"
 import { useIsoMorphicEffect } from "./useIsoMorphicEffect"
 
 const initialOffsets: Record<string, Partial<HeroOffset>> = {
-  automedics: {
+  nepgov: {
     x: 459.296875,
     y: -980.328125,
   },
-  "react-zero-ui": {
+  maxlive: {
+    x: 118.796875,
+    y: -748,
+  },
+  holago: {
     x: 459.296875,
     y: -748,
-  },
-  "iron-and-oak": {
-    x: 118.796875,
-    y: -748,
-  },
-  bespoke: {
-    x: 118.796875,
-    y: -980.328125,
   },
 }
 export function useOffset(cardIds: string[]) {

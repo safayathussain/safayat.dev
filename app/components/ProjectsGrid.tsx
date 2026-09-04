@@ -1,10 +1,6 @@
 "use client";
 import { AnimatedCard, HeroOffset } from "./ProjectCard/AnimatedCard";
-import phoneSwapZone from "@/app/images/phoneswapzone.png";
-import travelAi from "@/app/images/travel.png";
-import shineMen from "@/app/images/shinemen.png";
-import orbital_coaching from "@/app/images/orbital.png";
-
+import { PROJECTS } from "@/app/data/project-data";
 import clsx from "clsx";
 import { useOffset } from "../hooks/useOffset";
 import { useIsMobile } from "../hooks/useMediaQuery";
@@ -12,8 +8,7 @@ import { useRef, useEffect } from "react";
 import { useScroll, useSpring } from "motion/react";
 import { useUI } from "@react-zero-ui/core";
 
-// Update the ids array to match the actual grid IDs being used
-const ids = ["phoneSwapZone", "shineMen", "travelAi", "iron-and-oak"];
+const ids = ["nepgov", "maxlive", "holago"];
 
 export function ProjectsGrid({ className }: { className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -34,29 +29,23 @@ export function ProjectsGrid({ className }: { className?: string }) {
   const progress = useSpring(scrollYProgress, { stiffness, damping });
 
   const OFFSET_TUNING: Record<string, Partial<HeroOffset>> = {
-    phoneSwapZone: {
-      rot: 3,
+    nepgov: {
+      rot: -2,
       s: responsiveScale,
-      dx: isMobile ? -220 : -30,
-      dy: isMobile ? -120 : -40,
+      dx: isMobile ? -230 : -45,
+      dy: isMobile ? -130 : -35,
     },
-    shineMen: {
-      rot: -8,
+    maxlive: {
+      rot: 4,
       s: responsiveScale,
-      dx: isMobile ? -230 : -60,
-      dy: isMobile ? -130 : -40,
+      dx: isMobile ? -225 : -30,
+      dy: isMobile ? -125 : -20,
     },
-    travelAi: {
-      rot: 5,
+    holago: {
+      rot: 9,
       s: responsiveScale,
-      dx: isMobile ? -225 : -45,
-      dy: isMobile ? -130 : -25,
-    },
-    "iron-and-oak": {
-      rot: -5,
-      s: responsiveScale,
-      dx: isMobile ? -230 : -60,
-      dy: isMobile ? -130 : -40,
+      dx: isMobile ? -220 : -15,
+      dy: isMobile ? -120 : -5,
     },
   };
 
@@ -101,56 +90,23 @@ export function ProjectsGrid({ className }: { className?: string }) {
       className={clsx("relative scroll-mt-36", className)}
       ref={ref}
     >
-      <div className="relative z-4 grid grid-cols-1 grid-rows-1 gap-4 md:grid-cols-2 md:grid-rows-2">
-        <AnimatedCard
-          key="travelAi"
-          src={travelAi}
-          alt={"Ziarah Travel Ai Preview"}
-          offset={offsets["travelAi"]}
-          gridId="travelAi"
-          color="#DA961A"
-          type="Ziarah Travel AI"
-          progress={progress}
-          href="/projects/travelai"
-          dataText="View Details"
-        />
-
-        <AnimatedCard
-          key="shineMen"
-          src={shineMen}
-          alt={"Shine Men Preview"}
-          offset={offsets["shineMen"]}
-          gridId="shineMen"
-          color="#024EFC"
-          type="Men's Skin Care Website"
-          progress={progress}
-          href="/projects/shinemen"
-          dataText="View Details"
-        />
-        <AnimatedCard
-          key={"orbital_coaching"}
-          src={orbital_coaching}
-          alt={"Landing-Page Preview"}
-          offset={offsets["iron-and-oak"]}
-          gridId="iron-and-oak"
-          color="#13739C"
-          type="Landing Page"
-          progress={progress}
-          dataText="View Details"
-          href="/projects/orbital-coaching"
-        />
-        <AnimatedCard
-          key={"PhoneSwapZone"}
-          src={phoneSwapZone}
-          alt={"PhoneSwapZone - Preview"}
-          offset={offsets["phoneSwapZone"]}
-          gridId="phoneSwapZone"
-          color="#3B06D1"
-          type="Phone Resale Platform"
-          progress={progress}
-          href="/projects/phoneswapzone"
-          dataText="View Details"
-        />
+      <div className="relative z-4 grid grid-cols-1 gap-6 md:grid-cols-2">
+        {PROJECTS.map((project, index) => (
+          <AnimatedCard
+            key={project.slug}
+            src={project.thumbnail}
+            alt={project.thumbnailAlt}
+            title={project.title}
+            offset={offsets[project.slug] ?? { x: 0, y: 0, rot: 0, s: 1 }}
+            gridId={project.slug}
+            color={project.color}
+            type={project.type}
+            progress={progress}
+            href={`/projects/${project.slug}`}
+            dataText="View Details"
+            zIndex={PROJECTS.length - index}
+          />
+        ))}
       </div>
     </section>
   );

@@ -4,6 +4,7 @@ import clsx from "clsx";
 export const Card = ({
   src,
   alt,
+  title,
   color,
   type = "",
   reveal = true,
@@ -11,6 +12,7 @@ export const Card = ({
 }: {
   src: string | StaticImageData;
   alt: string;
+  title?: string;
   color?: string;
   type?: string;
   reveal?: boolean;
@@ -18,28 +20,28 @@ export const Card = ({
 }) => {
   return (
     <div
-      className={`h-full max-h-[400px] w-full overflow-hidden rounded-2xl [&_span]:transition-opacity [&_span]:duration-400 ${reveal ? "reveal-false:[&_span]:opacity-0" : "group relative"}`}
+      className="group relative h-full max-h-[400px] w-full overflow-hidden rounded-2xl"
     >
       <div className="h-full w-full text-white duration-400 group-hover:scale-105">
         <span
           className={clsx(
-            "absolute inset-0 overflow-hidden rounded-2xl opacity-90 contain-strict group-hover:opacity-0 after:absolute after:inset-0 after:z-4 after:rounded-2xl after:duration-200 after:content-['']"
+            "absolute inset-0 overflow-hidden rounded-2xl contain-strict transition-opacity duration-400 after:absolute after:inset-0 after:z-4 after:rounded-2xl after:duration-200 after:content-['']",
+            reveal ? "hero-card-overlay opacity-100" : "opacity-100"
           )}
           style={
             {
-              "--color-gradient": color,
               background:
-                "linear-gradient(to top, var(--color-gradient), #00000056 25%, transparent 50%)",
+                "linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.3) 14%, transparent 28%)",
             } as React.CSSProperties
           }
         >
-          <span className="absolute top-2 left-2 w-fit rounded-full border border-gray-700 bg-black px-4 py-2 text-xs shadow-md">
+          <span className="absolute top-2 left-2 w-fit rounded-full border border-gray-700 bg-black/80 px-4 py-2 text-xs shadow-md backdrop-blur-sm">
             {type}
           </span>
-          <span className="absolute bottom-4 left-4 z-5 w-fit text-lg">
-            {alt.split(" ")[0]}
+          <span className="absolute bottom-4 left-4 z-5 w-fit text-lg font-medium tracking-tight drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+            {title ?? alt.split(" ")[0]}
           </span>
-          <span className="absolute right-4 bottom-4 z-5 flex w-fit items-center gap-1 text-xs">
+          <span className="absolute right-4 bottom-4 z-5 flex w-fit items-center gap-1 text-xs drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
             {/* SVG inlined for performance */}
             <svg
               className="h-4 w-4"
@@ -58,9 +60,9 @@ export const Card = ({
           </span>
         </span>
         <Image
-          width={400}
+          width={600}
           height={400}
-          className="h-full w-full bg-gray-200 object-fit "
+          className="h-full w-full bg-slate-900 object-cover"
           src={src}
           alt={alt}
           priority

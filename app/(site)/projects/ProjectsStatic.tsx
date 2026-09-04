@@ -5,6 +5,7 @@ import { PROJECTS } from "@/app/data/project-data";
 
 type StaticProject = {
   id: string;
+  title: string;
   src: string | StaticImageData;
   alt: string;
   color: string;
@@ -18,6 +19,7 @@ type StaticProject = {
 
 export const STATIC_PROJECTS: StaticProject[] = PROJECTS.map((p) => ({
   id: p.slug,
+  title: p.title,
   src: p.thumbnail,
   alt: p.thumbnailAlt,
   color: p.color,
@@ -33,7 +35,7 @@ export const ProjectsStatic: React.FC = () => {
   return (
     <section className="border-t border-white/5">
       <div className="inside-container-small">
-        <div className="relative z-4 grid grid-cols-1 grid-rows-1 gap-4 md:grid-cols-2 md:grid-rows-2">
+        <div className="relative z-4 grid grid-cols-1 gap-6 md:grid-cols-2">
           {STATIC_PROJECTS.map((project) => {
             const ProjectWrapper = project.isExternal ? "a" : Link;
             const wrapperProps = project.isExternal
@@ -56,6 +58,7 @@ export const ProjectsStatic: React.FC = () => {
                 <Card
                   src={project.src}
                   alt={project.alt}
+                  title={project.title}
                   color={project.color}
                   type={project.type}
                   reveal={false}

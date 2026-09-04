@@ -53,17 +53,14 @@ export const SITE_SLUGS = {
   contact: "/#contact",
   about: "/#about-safayat",
   projectLinks: {
-    iao: "/projects/iron-and-oak",
-    travelAi: "/projects/travelAi",
-    shineMen: "/projects/shineMen",
+    nepgov: "/projects/nepgov",
+    maxlive: "/projects/maxlive",
+    holago: "/projects/holago",
   },
 } as const;
 
 export const externalLinks = {
-  shineMen: "https://men-s-skin-care.web.app",
-  orbital_client: "https://orbital-coaching-client.vercel.app/",
-  travelAI: "https://ziarah.ai",
-  phoneSwapZone: "https://phoneswapzone.web.app",
+  nepgov: "https://nepgov.com",
 } as const;
 
 const flattenSlugs = (

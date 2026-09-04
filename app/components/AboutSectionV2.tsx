@@ -41,7 +41,7 @@ export const AboutSectionV2 = ({ className = "" }: { className?: string }) => {
                 Safayat Hussain Chowdhury
               </Text>
               <p className="text-sm text-slate-400">
-                Full-Stack Engineer (Next.js + TypeScript)
+                Full-Stack Engineer
               </p>
             </MotionDiv>
           </div>

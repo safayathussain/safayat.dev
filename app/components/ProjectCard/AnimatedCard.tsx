@@ -18,8 +18,9 @@ export type HeroOffset = {
 }
 
 export interface AnimatedCardProps {
-  src: StaticImageData
+  src: StaticImageData | string
   alt: string
+  title?: string
   offset: HeroOffset
   color: string
   type: string
@@ -27,9 +28,10 @@ export interface AnimatedCardProps {
   progress: MotionValue<number>
   dataText?: string
   href?: string
+  zIndex?: number
 }
 
-export function AnimatedCard({ src, alt, offset, color, type, gridId, progress, dataText = "View Website ↗", href }: AnimatedCardProps) {
+export function AnimatedCard({ src, alt, title, offset, color, type, gridId, progress, dataText = "View Details", href, zIndex }: AnimatedCardProps) {
   const ref = useRef<HTMLDivElement>(null)
   useCompositorSpring(ref, progress)
   const isExternal = href ? href.startsWith("http") : false
@@ -40,7 +42,8 @@ export function AnimatedCard({ src, alt, offset, color, type, gridId, progress, 
       target={isExternal ? "_blank" : undefined}
       href={href ?? `${SITE_SLUGS.projects}/${gridId}`}
       data-grid-id={gridId}
-      className="reveal-false:pointer-events-none"
+      className="reveal-false:pointer-events-none relative"
+      style={{ zIndex }}
     >
       <div
         ref={ref}
@@ -50,11 +53,12 @@ export function AnimatedCard({ src, alt, offset, color, type, gridId, progress, 
             "--ty": `${offset.y}px`,
             "--rot": `${offset.rot}deg`,
             "--sc": `${offset.s}`,
+            zIndex,
           } as React.CSSProperties
         }
         className={clsx("group relative h-full w-full transform-gpu opacity-1 will-change-[transform,opacity] contain-content backface-hidden")}
       >
-        <Card src={src} alt={alt} color={color} type={type} text={dataText} />
+        <Card src={src} alt={alt} title={title} color={color} type={type} text={dataText} />
       </div>
     </Link>
   )
