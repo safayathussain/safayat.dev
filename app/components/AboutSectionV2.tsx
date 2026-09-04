@@ -55,28 +55,22 @@ export const AboutSectionV2 = ({ className = "" }: { className?: string }) => {
 
 
               <strong className="font-semibold text-slate-100">
-                I build
-                reliable, scalable production systems
+                I turn complex requirements into
               </strong>{" "}
-
-
-
-              and craft custom solutions when off-the-shelf tools fall short. My focus is on performance, clean architecture, and shipping products that last in the real world.
+               clear, functional user experiences—mapping out step-by-step user journeys and owning features end-to-end.
             </p>
 
             <p>
               <strong className="font-semibold text-slate-100">
-                I ship v1s in weeks and iterate in days
+                I handle  
               </strong>
-              . Leveraging tools server-first React, typed APIs, background
-              jobs and observability. Small PRs, rapid feedback, no
-              ceremony.
+               {" "}high-stakes, large-scale architectures, turning difficult technical constraints into clean, functional features.
             </p>
             <p>
               <strong className="font-semibold text-slate-100">
-                My core philosophy is simplicity
+                When faced with
               </strong>
-              . if complexity balloons, I delete it and design the simpler path.
+               {" "}complex logic or tight constraints, I break problems down, eliminate root friction, and deliver software built to perform.
             </p>
           </Typography>
         </div>

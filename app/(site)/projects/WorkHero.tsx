@@ -30,7 +30,7 @@ export const WorkHero: React.FC = () => {
           className="max-w-xs text-center text-sm leading-tight tracking-tight text-slate-400 md:max-w-sm md:pr-4 md:text-base"
         >
           A collection of my work — including real-world applications and
-          impactful client projects. See Live Site for more details.
+          impactful client projects.
         </AnimatedElement>
       </div>
     </div>

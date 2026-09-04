@@ -49,7 +49,7 @@ export const HeroV2 = () => {
             delay={0.6}
             className="max-w-xs leading-snug tracking-tight text-slate-400 md:max-w-sm md:pr-4 md:text-base"
           >
-            Software Engineer | 2+ Years Creating clean, responsive, and production-ready, high-quality web systems
+            Software Engineer | 3+ Years Creating clean, responsive, and production-ready, high-quality web systems
 
           </AnimatedElement>
 
