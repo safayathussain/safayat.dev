@@ -71,7 +71,7 @@ export const CallToActionButton = () => {
         <div className="relative flex items-center gap-1">
           {/* Avatar */}
           <div className="relative h-7 w-7 rounded-full">
-            <Image src={profilePhoto} alt="Profile photo of the founder" fill sizes="50px" className="rounded-full object-cover ring-2 ring-white/75" />
+            <Image src={profilePhoto} alt="Profile photo of the founder" fill sizes="50px"  className="rounded-full object-cover object-top ring-2 ring-white/75" />
           </div>
 
           {/* + You entrance */}

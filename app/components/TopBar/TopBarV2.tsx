@@ -36,7 +36,7 @@ export const TopBarV2: React.FC = () => {
                   alt="safayat logo"
                   height={26}
                   width={26}
-                  className="rounded-full h-9 w-9 object-cover shadow-md"
+                  className="rounded-full h-9 w-9 object-cover object-top shadow-md"
                 />
               </MotionDiv>
 
