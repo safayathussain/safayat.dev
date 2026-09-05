@@ -40,7 +40,7 @@ export const HeroV2 = () => {
               fadeDirection="left"
               className="inline-block text-slate-400"
             >
-              Portfolio
+              Hussain
             </AnimatedElement>
           </h1>
 
