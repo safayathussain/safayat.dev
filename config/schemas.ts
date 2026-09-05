@@ -54,7 +54,7 @@ export const projectsSchema: WithContext<CollectionPage> = {
       "@type": "ListItem",
       position: index + 1,
       url: project.isExternal
-        ? project.url
+        ? project.url 
         : `${SITE_CONFIG.url}${project.url}`,
       name: project.name,
       description: project.description,
