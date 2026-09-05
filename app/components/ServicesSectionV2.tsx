@@ -31,7 +31,7 @@ const tech = [
 
 const services = [
   { name: "Full Stack Development", src: "magic-wand" },
-  { name: "React Development", src: "paint-bucket" },
+  { name: "Next.js Development", src: "paint-bucket" },
   { name: "Performance Optimization", src: "web" },
   { name: "API Design & Integration", src: "world" },
   { name: "Code Reviews", src: "planet" },
