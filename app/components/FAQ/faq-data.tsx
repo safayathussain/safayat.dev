@@ -1,4 +1,5 @@
 import { type FAQ } from "./FAQTable"
+import { SITE_NAP } from "@/config/siteConfig"
 
 export const faqData: FAQ[] = [
   {
@@ -6,7 +7,7 @@ export const faqData: FAQ[] = [
     question: "What is the purpose of a developer portfolio?",
     answer: (
       <>
-        A great developer portfolio is more than a resume; it&apos;s a live demonstration of your skills and philosophies. This site, for example, isn&apos;t
+        A great developer portfolio is more than a <a href={SITE_NAP.profiles.resume} download target="_blank" className="underline font-medium text-white hover:text-slate-300">resume</a>; it&apos;s a live demonstration of your skills and philosophies. This site, for example, isn&apos;t
         just a list of projects; it&apos;s built on my own performance-oriented library (React-Zero-UI). to showcase your commitment to simple, fast, and
         elegant code. a recent study found that portfolios DO have a future.{" "}
         <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5306426/" className="text-slate-500">

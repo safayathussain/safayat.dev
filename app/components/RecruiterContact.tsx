@@ -63,8 +63,7 @@ export const RecruiterContact: React.FC = () => {
               <Icon name="calendar" height={18} width={18} className="h-[18px] w-[18px]  " />
               Book a call
             </WhiteButtonLink> */}
-            <WhiteButtonLink href={SITE_NAP.profiles.resume} className="relative text-black font-semibold">
-
+            <WhiteButtonLink href={SITE_NAP.profiles.resume} download={"Resume"} className="relative text-black font-semibold">
               Resume
             </WhiteButtonLink>
           </div>

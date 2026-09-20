@@ -40,8 +40,7 @@ export const SITE_NAP = {
     linkedIn: "https://www.linkedin.com/in/safayathussain/",
     github: "https://github.com/safayathussain",
     x: "https://x.com/",
-    resume:
-      "https://docs.google.com/document/d/1KZt5Ai6sCwHWtRCKDbxe6UYUPgklvx8xGJlBq4ows6M/edit?usp=sharing",
+    resume: "/resume.pdf",
   } as const,
   logo: "/favicon.ico",
   favicon: "/favicon.ico",
