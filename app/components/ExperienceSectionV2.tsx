@@ -18,7 +18,7 @@ const experiences: Experience[] = [
     {
         company: "Syscomatic",
         role: "Full Stack Engineer",
-        duration: "2022 - Present",
+        duration: "2022 - 2025",
         description: "",
         achievements: [
             "Built and maintained dynamic, responsive, and user-friendly web applications in collaboration with cross-functional development teams.",
