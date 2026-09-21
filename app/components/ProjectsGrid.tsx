@@ -8,7 +8,7 @@ import { useRef, useEffect } from "react";
 import { useScroll, useSpring } from "motion/react";
 import { useUI } from "@react-zero-ui/core";
 
-const ids = ["nepgov", "maxlive", "holago"];
+const ids = ["nepgov", "maxlive", "holago", "jira_clone"];
 
 export function ProjectsGrid({ className }: { className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -46,6 +46,12 @@ export function ProjectsGrid({ className }: { className?: string }) {
       s: responsiveScale,
       dx: isMobile ? -220 : -15,
       dy: isMobile ? -120 : -5,
+    },
+    jira_clone: {
+      rot: 15,
+      s: responsiveScale,
+      dx: isMobile ? -215 : 10,
+      dy: isMobile ? -115 : 5,
     },
   };
 

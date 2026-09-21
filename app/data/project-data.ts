@@ -33,8 +33,10 @@ export const PROJECTS: ProjectData[] = [
   {
     slug: "nepgov",
     title: "NepGov",
-    tagline: "Civic data, dynamic public polling & real-time electoral analytics platform",
-    subtitle: "Civic Data, Public Opinion Polling & Real-Time Electoral Analytics Platform",
+    tagline:
+      "Civic data, dynamic public polling & real-time electoral analytics platform",
+    subtitle:
+      "Civic Data, Public Opinion Polling & Real-Time Electoral Analytics Platform",
     type: "Civic Intelligence & Polling Platform",
     color: "#06B6D4",
     thumbnail: "/projects/nepgov/home.png",
@@ -59,22 +61,26 @@ export const PROJECTS: ProjectData[] = [
       {
         src: "/projects/nepgov/home.png",
         alt: "NepGov — Civic Data & Public Opinion Polling Homepage",
-        caption: "Public Portal: Real-time public sentiment tracking, active civic surveys, and bilingual interface.",
+        caption:
+          "Public Portal: Real-time public sentiment tracking, active civic surveys, and bilingual interface.",
       },
       {
         src: "/projects/nepgov/election.png",
         alt: "NepGov — Dynamic Election Hub",
-        caption: "Dynamic Election Hub (/election/*): Real-time poll aggregation and interactive candidate dashboards across FPTP and PR electoral systems.",
+        caption:
+          "Dynamic Election Hub (/election/*): Real-time poll aggregation and interactive candidate dashboards across FPTP and PR electoral systems.",
       },
       {
         src: "/projects/nepgov/tracker.png",
         alt: "NepGov — Dynamic Trackers & Public Opinion Polling",
-        caption: "Modular Trackers: Real-time polling engine with dynamic voter-verification filters to prevent bot distortion.",
+        caption:
+          "Modular Trackers: Real-time polling engine with dynamic voter-verification filters to prevent bot distortion.",
       },
       {
         src: "/projects/nepgov/admin-home.png",
         alt: "NepGov — Admin Dashboard & Management Architecture",
-        caption: "Admin Operations: Dynamic RBAC permission controls, election engine, live survey controller, and headless CMS.",
+        caption:
+          "Admin Operations: Dynamic RBAC permission controls, election engine, live survey controller, and headless CMS.",
       },
     ],
     featureSections: [
@@ -138,8 +144,10 @@ export const PROJECTS: ProjectData[] = [
   {
     slug: "maxlive",
     title: "MaxLive",
-    tagline: "Multi-tiered administrative and financial ecosystem for live-streaming platforms",
-    subtitle: "Multi-Tiered Admin Infrastructure, Point Economy & Agency Operations Ecosystem",
+    tagline:
+      "Multi-tiered administrative and financial ecosystem for live-streaming platforms",
+    subtitle:
+      "Multi-Tiered Admin Infrastructure, Point Economy & Agency Operations Ecosystem",
     type: "Enterprise Admin & Fintech Platform",
     color: "#8B5CF6",
     thumbnail: "/projects/maxlive/maxlive-super.png",
@@ -162,22 +170,26 @@ export const PROJECTS: ProjectData[] = [
       {
         src: "/projects/maxlive/maxlive-super.png",
         alt: "MaxLive — Super Admin Dashboard",
-        caption: "Super Admin Panel: Central platform governance, streaming telemetry, transaction auditing, and global security.",
+        caption:
+          "Super Admin Panel: Central platform governance, streaming telemetry, transaction auditing, and global security.",
       },
       {
         src: "/projects/maxlive/maxlive-admin.png",
         alt: "MaxLive — Country Operations Admin Panel",
-        caption: "Country Admin Panel: Regional governance dashboard to oversee operations, localized metrics, and regional agencies.",
+        caption:
+          "Country Admin Panel: Regional governance dashboard to oversee operations, localized metrics, and regional agencies.",
       },
       {
         src: "/projects/maxlive/maxlive-agent.png",
         alt: "MaxLive — Agency Admin Management Hub",
-        caption: "Agency Admin Panel: Operational hub to recruit streamers, monitor point accruals, and log manual payout settlements.",
+        caption:
+          "Agency Admin Panel: Operational hub to recruit streamers, monitor point accruals, and log manual payout settlements.",
       },
       {
         src: "/projects/maxlive/maxlive-reseller.png",
         alt: "MaxLive — Reseller Distribution Portal",
-        caption: "Reseller Panel: Point distribution interface for authorized resellers to manage point inventory, sales, and agency payouts.",
+        caption:
+          "Reseller Panel: Point distribution interface for authorized resellers to manage point inventory, sales, and agency payouts.",
       },
     ],
     featureSections: [
@@ -236,8 +248,10 @@ export const PROJECTS: ProjectData[] = [
   {
     slug: "holago",
     title: "Holago",
-    tagline: "Streamlined apparel e-commerce platform & two-tier retail management",
-    subtitle: "Streamlined Clothing E-Commerce Platform & Two-Tier Retail Management System",
+    tagline:
+      "Streamlined apparel e-commerce platform & two-tier retail management",
+    subtitle:
+      "Streamlined Clothing E-Commerce Platform & Two-Tier Retail Management System",
     type: "Apparel E-Commerce Platform",
     color: "#F59E0B",
     thumbnail: "/projects/holago/holago-report.png",
@@ -260,12 +274,14 @@ export const PROJECTS: ProjectData[] = [
       {
         src: "/projects/holago/holago-report.png",
         alt: "Holago — Sales Analytics & Reports",
-        caption: "Commerce Analytics: Revenue tracking, inventory deduction metrics, and sales report generation.",
+        caption:
+          "Commerce Analytics: Revenue tracking, inventory deduction metrics, and sales report generation.",
       },
       {
         src: "/projects/holago/holago-orders.png",
         alt: "Holago — Store Admin & Order Management",
-        caption: "Store Admin Panel: Centralized incoming order processing, fulfillment status transitions, and inventory control.",
+        caption:
+          "Store Admin Panel: Centralized incoming order processing, fulfillment status transitions, and inventory control.",
       },
     ],
     featureSections: [
@@ -306,6 +322,83 @@ export const PROJECTS: ProjectData[] = [
             title: "Essential Authentication & Profiles",
             description:
               "Role-based access separating standard customer accounts from administrative store management using secure authentication token handling.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "jira_clone",
+    title: "Jira Clone",
+    tagline:
+      "A Kanban board built to practice FastAPI backend development and UI interactions",
+    subtitle: "FastAPI Practice Project with Simulated AI Interactions",
+    type: "Practice Project",
+    color: "#4F46E5",
+    thumbnail: "/projects/jira_clone/jira_board.png",
+    thumbnailAlt: "Jira Clone Kanban Board Preview",
+    year: "2026",
+    role: "Full Stack Developer",
+    description: [
+      "This project was built primarily as a learning exercise to practice building REST APIs with FastAPI, handling database interactions, and managing user authentication.",
+      "On the frontend, it features a functional Kanban board and experimental UI elements, such as a simulated 'AI' text streaming effect, to practice building engaging user interfaces without the overhead of real AI integrations.",
+    ],
+    technologies: [
+      "FastAPI",
+      "Next.js",
+      "Zustand",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Sqlite",
+    ],
+    images: [
+      {
+        src: "/projects/jira_clone/jira_board.png",
+        alt: "Jira Clone — Interactive Kanban Board",
+        caption:
+          "Kanban Board: Basic drag-and-drop issue management to test backend state updates.",
+      },
+      {
+        src: "/projects/jira_clone/jira_issue.png",
+        alt: "Jira Clone — Slide-out Issue Details",
+        caption:
+          "Issue Details: A slide-out panel built with Framer Motion for viewing and editing task information.",
+      },
+      {
+        src: "/projects/jira_clone/jira_member.png",
+        alt: "Jira Clone — Workspace & Member Management",
+        caption:
+          "Workspaces: Basic role-based access control implemented to practice database relationships and API security.",
+      },
+    ],
+    featureSections: [
+      {
+        title: "Backend Practice Highlights",
+        items: [
+          {
+            title: "FastAPI Implementation",
+            description:
+              "Practiced building structured RESTful endpoints, data validation with Pydantic, and dependency injection.",
+          },
+          {
+            title: "Database Relationships",
+            description:
+              "Set up a SQLite database using SQLAlchemy to map complex relationships between workspaces, members, and issues.",
+          },
+        ],
+      },
+      {
+        title: "Frontend UI Experiments",
+        items: [
+          {
+            title: "Simulated AI Streaming",
+            description:
+              "Built a mock 'AI' text generator that streams a pre-written markdown string with variable delays to practice building engaging UI loading states.",
+          },
+          {
+            title: "Interactive Components",
+            description:
+              "Implemented drag-and-drop Kanban columns and animated slide-out panels to practice building dynamic React components.",
           },
         ],
       },
